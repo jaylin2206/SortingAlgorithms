@@ -1,9 +1,7 @@
 public class Quick {
-    // https://github.com/novillo-cs/apcsa_material/blob/main/lessons/sorting_algorithms/Sorting%20Algorithms%20(part%202).pdf
     
     public static int QuickSelect( int[] data, int start, int end, int k ) {
 
-        // index error with pivot - 1?
         int pivot = partition( data, start, end);
         if (pivot > k - 1) return QuickSelect(data, start, pivot - 1, k);
         else if (pivot < k - 1) return QuickSelect(data, pivot + 1, end, k);
@@ -45,8 +43,6 @@ public class Quick {
             pivot = start - 1;
         }
 
-        //System.out.println("pivot = " + pivot);
-        //Driver.arrayPrinter(data);
         return pivot;   
     }
 
